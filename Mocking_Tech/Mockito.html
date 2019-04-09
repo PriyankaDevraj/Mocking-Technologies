@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>
+		<b><i>MOCKITO</i></b>
+	</h2>
+	<ul style="list-style-type: disc;">
+		<li><strong>Definition</strong>-Mockito is a mocking framework,
+			JAVA-based library that is used for effective unit testing of JAVA
+			applications. Mockito is used to mock interfaces so that a dummy
+			functionality can be added to a mock interface that can be used in
+			unit testing.</li>
+		<br>
+		<li><strong>Main Features</strong>-– Mocks concrete classes as
+			well as interfaces, supports annotations, allows flexible
+			verification in order, supports exception.</li>
+		<br>
+		<li><strong>Integration with JUnit</strong>-– Mockit can be
+			integrated with JUnit for unit
+			testing.@RunWith(MockitoJUnitRunner.class) implies that JUnit will be
+			attached to mockit runner for testing.@InjectMocks annotation is used
+			to identify class which is going to use the mock object.@Mock creates
+			the mock object to be injected for testing.We can also use mock()
+			method to create a mock object. This is shown in example 1 <a
+			href="code/MathAppTesterMockito.java">Example</a> <a
+			href="code/MathAppTesterMockito1.java">Example 1</a></li>
+		<br>
+		<li><strong>Test and Behavior Driven Development support</strong>--The
+			behavior to be tested can be added using "when" and "thenReturns".It
+			also supports a given, when and then test structure. These are
+			demonstrated in example 2 and example 3. <a
+			href="Code/MathAppTesterMockito.java">Example 2</a> <a
+			href="Code/MathAppTesterMockito1.java">Example 3</a></li>
+		<br>
+		<li><strong>Verify method</strong>--Mockito can ensure whether a
+			mock method is being called with required arguments or not.We can
+			also verify the exact number of times a behavior is tested using
+			times(). We can check whether a behavior was tested as least once,
+			never or at max a specified number.There is also a timeout feature
+			which we can mention in verify which verifies whether a test executes
+			within the specified time. These features are used in examples
+			mentioned. <a href="Code\MathAppTesterMockito.java">Example 2</a> <a
+			href="Code\MathAppTesterMockito1.java">Example 3</a></li>
+		<br>
+		<li><strong>Exception Handling Using Mockito</strong>--Using
+			doThrow and when we can test exception with Mockito. In the test
+			class we need to mention the expected exception which is being
+			thrown. <a href="Code\MockitoExceptionDemo.java">Example 4</a></li>
+		<br>
+		<li><strong>The InOrder class</strong>--This class helps us
+			define a order in which the behaviors should be tested. If the order
+			is different, test fails. This is done by instantiating the class
+			InOrder and then doing inOrder.verify as shown in below example.<a
+			href="Code\MathAppTesterMockito1.java">Example</a></li>
+		<br>
+		<li><strong>The Answer interface</strong>--Mockito provides a
+			Answer interface which allows stubbing with generic interface.<a
+			href="Code\MathAppTesterMockito1.java">Example</a></li>
+		<br>
+		<li><strong>spy and reset</strong>--Use of spy helps us access
+			the original object instance and the reset object resets the mock
+			object.<a href="Code\MathAppTesterMockito1.java">Example</a></li>
+		<br>
+
+	</ul>
+</body>
+</html>

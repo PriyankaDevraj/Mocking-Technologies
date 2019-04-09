@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>
+		<b><i>PowerMock</i></b>
+	</h2>
+	<ul style="list-style-type: disc;">
+		<li><strong>Definition</strong>--PowerMock is a framework that
+			extends other mock libraries such as EasyMock with more powerful
+			capabilities. PowerMock uses a custom classloader and bytecode
+			manipulation to enable mocking of static methods, constructors, final
+			classes and methods, private methods, removal of static initializers
+			and more.<br>It consists of two extension APIs, one for EasyMock
+			and the other for Mockito.It supports JUnit and TestNG.</li>
+		<br>
+		<li><strong>Scenario to use PowerMock</strong>-–Using a 3rd party
+			or legacy framework, design of the code like private
+			methods,PowerMock allows to use static methods for performance and
+			mock.</li>
+		<br>
+		<li><strong>Accessing Internal State</strong>--Whitebox class
+			provides a set of methods which could help getting the state of the
+			class, if required. Usually, it's not a good idea to get/modify
+			non-public fields, but sometimes it's only way to cover code by test
+			for future refactoring. <a href="Code/TestAddService .java">Example</a></li>
+		<br>
+		<li><strong>Suppressing Unwanted Behavior</strong>--There are
+			many annotations are available in power mock, which can be used to
+			suppress behavior of constructors, methods or initializers.For
+			example, Whitebox.newInstance(SomeClass.class) can be used to
+			instantiate a class without invoking the constructor what so
+			ever.Other examples are,
+			@RunWith(PowerMockRunner.class),@SuppressStaticInitializationFor("org.mycompany.SomeClass")
+			etc.<a href="Code\HelloWorldTest.java">Example 1</a></li>
+		<br>
+		<li><strong>Main annotations</strong>--Some useful annotations
+			are @RunWith(PowerMockRunner.class),@PrepareForTest(TestClass.class),
+			PowerMock.createMock(TestClass.class),PowerMock.mockStatic(TestClass.class),PowerMock.createPartialMock(
+			),PowerMock.expectPrivate(),PowerMock.expectNew().<a
+			href="Code\UserControllerTest.java">Example 4</a></li>
+		<br>
+		<li><strong>Replay and verify all</strong>--PowerMock.replayAll
+			is used to change all mocks object and classes maintained by
+			PowerMock to replay mode. PowerMock.verifyAll is used to verify all
+			mock objects and classes maintained by PowerMock.PowerMock.resetAll
+			is used to reset all mock objects and classes maintained by
+			PowerMock.<a href="Code\UserControllerTest.java">Example</a></li>
+		<br>
+		<li><strong>The PowerMockito</strong>--PowerMock provides a class
+			called "PowerMockito" for creating mock/object/class and initiating
+			verification, and expectations, and for everything else one can still
+			use Mockito to setup and verify expectation.Some useful annotations
+			are,
+			PowerMockito.mockStatic(),PowerMockito.verifyStatic(Static.class),
+			PowerMockito.doThrow.</li>
+		<br>
+		<li><strong>spy</strong>--PowerMock spy can be used to access the
+			private methods.</li>
+		<br>
+
+	</ul>
+</body>
+</html>

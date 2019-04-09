@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>
+		<b><i>EASYMOCK</i></b>
+	</h2>
+	<ul style="list-style-type: disc;">
+		<li><strong>Definition</strong>-EasyMock is an open-source
+			testing framework for Java released under the Apache License. The
+			framework allows the creation of test double objects for the purpose
+			of Test-driven Development (TDD) or Behavior Driven Development
+			(BDD).</li>
+		<br>
+		<li><strong>Main Features</strong>-– Mocks concrete classes as
+			well as interfaces, supports annotations, with Strict mock order of
+			method execution can be checked, supports exception.</li>
+		<br>
+		<li><strong>Integration with JUnit</strong>-– EasyMock can be
+			integrated with JUnit for unit testing.@RunWith(EasyMockRunner.class)
+			implies that JUnit will be attached to EasyMock runner for
+			testing.@TestSubjectannotation is used to identify class which is
+			going to use the mock object.@Mock creates the mock object to be
+			injected for testing.We can also use createMock() method to create a
+			mock object. This is shown in example 1 <a
+			href="code/TestMathApplication.java">Example</a> <a
+			href="code/PortfolioTester.java">Example 1</a></li>
+		<br>
+		<li><strong>Test and Behavior Driven Development support</strong>--The
+			behavior to be tested can be added using "EasyMock.expect" and
+			"andReturn".It is not activated until EasyMock.replay() is executed.
+			<a href="code/TestMathApplication.java">Example 2</a></li>
+		<br>
+		<li><strong>Verify method</strong>--Easymock can ensure whether a
+			mock is used or not using EasyMock.verify().It can also verify the
+			number of calls to a method using
+			EasyMock.expectLastCall().times().It also provides
+			times(min,max),atLeastOnce,anyTimes methods to verify number of
+			calls. <a href="code/TestMathApplication.java">Example</a></li>
+		<br>
+		<li><strong>Exception Handling in EasyMock</strong>--Using Expect
+			and andThrow exception can be handled in EasyMock. In the test class
+			we need to mention the expected exception which is being thrown. <a
+			href="code/TestMathApplication.java">Example 4</a></li>
+		<br>
+		<li><strong>createStrictMock and createNiceMock</strong>--EasyMock.createStrictMock()
+			creates a mock and also takes care of the order of method calls that
+			the mock is going to make in due course of its action.
+			EasyMock.createNiceMock() creates a mock and sets the default
+			implementation of each method of the mock. If EasyMock.createMock()
+			is used, then invoking the mock method throws assertion error.<a
+			href="code/TestMathApplication.java">Example</a></li>
+		<br>
+		<li><strong>replayAll, verifyAll and resetAll</strong>--replayAll()
+			– Registers all the created mocks in one batch. verifyAll() –
+			Verifies all the mock operations in one batch. resetAll() – Resets
+			all the mock operations in one batch.<a
+			href="code/TestMathApplication.java">Example</a></li>
+		<br>
+		<li><strong>spy and reset</strong>--Use of spy helps us access
+			the original object instance and the reset object resets the mock
+			object.<a href="code/TestMathApplication.java">Example</a></li>
+		<br>
+
+	</ul>
+</body>
+</html>
